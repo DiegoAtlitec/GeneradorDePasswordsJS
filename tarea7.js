@@ -78,7 +78,7 @@ function generatePassword() {
 
         generatePassword(); 
 
-//Viva Batiz y ESCOM <3<3<3<3
+//Viva Batiz y ESCOM <3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3<3
 
 // const rangeInput = document.getElementById("length");
 // const rangeValue = document.getElementById("lengthValue");
