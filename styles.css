@@ -1,0 +1,299 @@
+:root {
+    --verde: rgb(167, 255, 140);
+    --fondo: rgb(16, 15, 20);
+    --contenedor: rgb(37, 34, 42);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: var(--fondo);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    font-size: 15px;
+    color: gray;
+}
+
+.password-box {
+    background: var(--contenedor);
+    padding: 14px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+.containerMain {
+    background: var(--contenedor);
+    padding: 14px;
+    border-radius: 0px;
+    width: 320px;
+    text-align: center;
+}
+
+input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    outline: none;
+}
+
+button {
+    color: black;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.imgButton {
+    background-image: url(copy.png);
+    background-size: cover;
+    width: 24px;
+    height: 30px;
+    padding: 0;
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer; 
+
+    filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(800%) hue-rotate(60deg) brightness(90%) contrast(90%);
+}
+
+.custom-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+
+    left: 0;
+    height: 20px;
+
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--verde);
+    border-color: var(--verde);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+
+    left: 6px;
+    top: 2px;
+    width: 5px;
+
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    height: 10px;
+
+    transform: rotate(45deg);
+}
+
+.botonGenerar {
+    background: var(--verde);
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+}
+
+.options {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.strengthBar {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+                .bar{
+                    height: 22px;
+                    margin: 0 2px;
+                    border: 2px solid white;
+                    width: 8px;
+                    background-color: transparent;
+                }
+
+                .bar.active {
+                    background: yellow;
+                    border: 2px solid yellow;
+                }
+
+.bar.active.strong {
+    background: green;
+    border: 2px solid green;
+}
+
+.bar.active.medium {
+    background: yellow;
+    border: 2px solid yellow;
+}
+
+.bar.active.easy {
+    background: red;
+    border: 2px solid red;
+}
+
+.strengthText {
+    margin-left: 15px;
+}
+
+.strengthText h3 {
+    font-size: 14px;
+    color: gray;
+}
+
+.strengthCore {
+    display: flex;
+
+    align-content: space-around;
+}
+
+.strengthCore div h2 {
+    color: white;
+    font-size: 17px;
+}
+
+.strengthCoreText {
+    margin-right: 5px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    width: 10px;
+}
+
+.character-length {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character-length span {
+    font-size: 12px;
+    color: white;
+}
+
+#lengthValue {
+    font-size: 18px;
+    color: var(--verde);
+}
+
+#length {
+    color: red;
+}
+
+input[type="range"] {
+
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    height: 8px;
+    opacity: 0.9;
+
+    background: var(--contenedor);
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    
+    height: 8px;
+    background: var(--contenedor); 
+    border-radius: 5px;
+    width: 98%;
+    border: 1px solid white; 
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    border: 2px solid white;
+    margin-top: -6px;
+}
+
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: var(--contenedor);
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+input[type="range"]::-moz-range-thumb {
+    
+    height: 20px;
+    background: var(--verde);
+    cursor: pointer;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}

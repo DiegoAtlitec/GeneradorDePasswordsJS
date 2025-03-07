@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+    </div>
+    <div class="password-box">
+            <input type="text" id="password" readonly value="PTx1f5DaFX">
+            <button class="imgButton" onclick="copyPassword()"></button>
+        </div>
+    <div class="containerMain">
+        
+
+    
+        <div class="character-length">
+            <span>Character Length:</span>
+            <span id="lengthValue">14</span>
+        </div>
+        <input type="range" id="length" min="8" max="20" value="14">
+
+
+        <div class="options">
+    <label class="custom-checkbox">
+        <input type="checkbox" id="uppercase" checked>
+        <span class="checkmark"></span>
+        Incluir Mayúsculas
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox" id="lowercase" checked>
+        <span class="checkmark"></span>
+        Incluir Minúsculas
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox" id="numbers" checked>
+        <span class="checkmark"></span>
+        Incluir Números
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox" id="symbols" >
+        <span class="checkmark"></span>
+        Incluir Símbolos
+    </label>
+</div>
+
+
+        <div class="strength">
+
+            <div class="strengthText">
+                <h3>STRENGHT</h3>
+            </div>
+
+            <div class="strengthCore">
+                
+                <div>
+                    <h2 class="strengthCoreText">MEDIUM</h2><!-- que diga la dificultad -->
+                </div>
+
+                <div class="strengthBar">
+                    <div class="bar active"></div>
+                    <div class="bar active"></div>
+                    <div class="bar active"></div>
+                    <div class="bar active"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="botonGenerar" onclick="generatePassword()">GENERAR ➞</button>
+    </div>
+
+    <script src="tarea7.js"></script>
+</body>
+</html>
