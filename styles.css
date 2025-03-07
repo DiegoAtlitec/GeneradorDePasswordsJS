@@ -59,6 +59,10 @@ button {
     font-size: 16px;
 }
 
+#password{
+    font-family: 'Source Code Pro', monospace;
+}
+
 .imgButton {
     background-image: url(copy.png);
     background-size: cover;
